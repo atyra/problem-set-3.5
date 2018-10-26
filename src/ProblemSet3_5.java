@@ -20,12 +20,36 @@ public class ProblemSet3_5 {
 		
 		// test your solutions here
 		
-		/*ps.primes(1, 1000);*/
 		ps.primes(1, 1000);
+		ps.primes(43, 560);
+		ps.primes(90, 124);
+		ps.primes(1000, 532);
+		ps.primes(12, 12);
+		
 		ps.leapYears(3);
+		ps.leapYears(64);
+		ps.leapYears(21);
+		ps.leapYears(22);
+		
 		ps.palindromicNumbers(-121);
+		ps.palindromicNumbers(1234);
+		ps.palindromicNumbers(3456543);
+		ps.palindromicNumbers(10012);
+		ps.palindromicNumbers(-123);
+		
 		ps.fibonacci(12);
+		ps.fibonacci(1);
+		ps.fibonacci(43);
+		ps.fibonacci(22);
+		ps.fibonacci(11);
+		
 		ps.multiples(10, 25, 100);
+		ps.multiples(23, 43, 20043);
+		ps.multiples(-2, 1, 2);
+		ps.multiples(20, 20, 400);
+		ps.multiples(10, 10, 9);
+		
+		
 	}
 	
 	/**
@@ -71,7 +95,7 @@ public class ProblemSet3_5 {
 		if (primes == 1) {
 			System.out.println("There is " + primes + " prime number.");
 		}
-		else if (primes > 1) {
+		else if (primes > 1 || primes == 0) {
 			System.out.println("There are " + primes + " prime numbers.");
 		}
 	}
@@ -100,7 +124,12 @@ public class ProblemSet3_5 {
 				}
 				else {
 					System.out.print(nextLeap + ", ");
-					nextLeap += 4;
+					if (nextLeap == 2096 || nextLeap == 2196 || nextLeap == 2296 || nextLeap == 2496 || nextLeap == 2596 || nextLeap == 2696 || nextLeap == 2896 || nextLeap == 2996 ) {
+						nextLeap += 8;
+					}
+					else {
+						nextLeap += 4;
+					}
 				}
 				
 			}
